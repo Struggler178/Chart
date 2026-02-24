@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style src="styles.css"></style>
+    <title>Chart</title>
+</head>
+<body>
+<h1> Super Graph</h1>
+
+<button id="openForm" onclick="openForm()" >Options</button>
+  
+<div class="form-popup" id="myForm" style="display: none;">
+  <form id="lineForm">
+    <label>Label: <input type="text" id="lineLabel" required></label>
+    <br/>
+    <br/>
+    <label>NOT MET% : <input type="number" step="any" id="lineData1" required></label>
+    <label>MET% : <input type="number" step="any" id="lineData2" required></label>
+    <label>EXCEED% : <input type="number" step="any" id="lineData3" required></label>
+    <button id="sub" type="submit" >Add Line</button>
+  </form>
+</div>
+ 
+<br/><br/><br/>
+<br/>
+
+
+<div class="outbox">
+  <div class="container">
+  <canvas  id="myChart"></canvas>
+</div>
+</div>
+
+
+<br/><br/><br/><br/><br/>
+
+
+<div class="center">
+
+  <figure>
+  <figcaption>Advanced Options</figcaption>
+  <ul>
+    <li>
+        <h4>Import csv chart data</h4>
+          <input type="file" id="csvFile" accept=".csv" />
+    </li>
+  <br>
+    <li>
+        <h4>Download chart data as csv</h4>
+          <button id="downloadCSV" >Download CSV</button>
+    </li>
+  <br>
+    <li>
+        <h4>Download chart as image</h4>
+          <button id="downloadImage" onclick="downloadChart()" >Download chart</button>
+    </li>
+  </figure>
+  </ul>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script  src="script.js"></script>
+    
+</body>
+</html>
